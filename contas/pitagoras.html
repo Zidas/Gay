@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitagoras</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <a href="escolha.html">Voltar</a>
+    <div class="tudo" > 
+        <h1>Pitagoras</h1>
+        Valor do cateto:
+        <input type="number" name="Pn1" id="Pn1" >
+        <br>
+        Valor do cateto:
+        <input type="number" name="Pn2" id="Pn2" >
+        <hr>
+        Hipotenusa:
+        <input type="button" value="Resposta" onclick="somar()" >
+
+        <div id="res"></div>
+
+
+        <div class="tudo" >
+            <script>
+                function somar(){
+           /* pronpt
+            var n1= Number(prompt('coloque o valor do cateto'))
+            var n2= Number(prompt('coloque o valor do cateto '))*/
+
+            //ligação com o input
+
+            var vp1 = document.getElementById('Pn1')
+            var vp2 = document.getElementById('Pn2')
+
+            var n1 = Number(vp1.value)
+            var n2 = Number(vp2.value)
+
+            //conta
+            var s1 = n1**2
+            var s2 = n2**2
+            var s = s1 + s2
+            var r = Math.sqrt(s)
+
+            res.innerHTML = `resposta é ${r}`
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
+

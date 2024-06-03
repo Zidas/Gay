@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regra de três</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<script>
+        function somar(){
+            //ligação com o input
+            var vdp1 = document.getElementById('Pn1')
+            var vdp3 = document.getElementById('Pn3')
+            var vdp2 = document.getElementById('Pn2')
+            var vdp4 = document.getElementById('Pn4')
+
+            var n1 = Number(vdp1.value)
+            var n3 = Number(vdp3.value)
+            var n2 = Number(vdp2.value)
+            var n4 = Number(vdp4.value)
+            
+            //conta cruzada
+            var v1 = (n2 * n3) / n1
+
+            res.innerHTML = `A resposta é ${v1}`
+        }
+        function somarr(){
+               
+               //ligação com o input
+               var vip1 = document.getElementById('IV1')
+               var vip3 = document.getElementById('IV3')
+               var vip2 = document.getElementById('IV2')
+               var vip4 = document.getElementById('IV4')
+
+               var v1 = Number(vip1.value)
+               var v3 = Number(vip3.value)
+               var v2 = Number(vip2.value)
+               var v4 = Number(vip4.value)
+               
+               //conta cruzada
+               var vf1 = (v1 * v3) / v2
+
+               res1.innerHTML = `A resposta é ${vf1}`
+           }
+</script>
+
+<body>
+    <a href="escolha.html">Voltar</a> 
+        <div class="tudo" >
+
+            <h1>Diretamente Proporcional</h1>
+            
+            <input type="number" name="Pn1" id="Pn1" >
+            <input type="number" name="Pn3" id="Pn3" >
+
+            <br>
+            x
+            <br>
+            
+            <input type="number" name="Pn2" id="Pn2" >
+            <input type="number" name="Pn4" id="Pn4" placeholder="incógnita" >
+            <hr>
+            <input type="button" value="Resposta" onclick="somar()" >
+    
+            <div id="res"></div>
+        </div>
+
+        <div class="tudo">
+
+            <h1>Inversamente Proporcional</h1>
+            
+            <input type="number" name="IV1" id="IV1" >
+            <input type="number" name="IV3" id="IV3" >
+            
+            <br>
+            =
+            <br>
+            
+            <input type="number" name="IV2" id="IV2" >
+            <input type="number" name="IV4" id="IV4" placeholder="incógnita" >
+            <hr>
+            
+            <input type="button" value="Resposta" onclick="somarr()" >
+    
+            <div id="res1"></div>
+        </div>
+
+            <div class="recado" >
+                        <small> * Não coloque nenhum valor na incógnita, pois é esse valor que você deseja descobrir.</small>
+            </div>
+</body>
+</html>

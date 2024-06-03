@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...</title>
+</head>
+<body>
+    
+    <h1>Coloque uma letra ou um número</h1>
+    <input type="text" name="Tt1" id="Tt1">
+    <input type="button" value="resposta" onclick="resposta()">
+    <div id="res"></div>
+
+    <script>
+
+        function resposta(){
+
+            var v1 = document.getElementById('Tt1').value
+
+            if (isNaN(v1)){
+                res.innerHTML += `<p>Não é um Numero</p>`
+            }else{
+                res.innerHTML += `<p>É um numero</p>`
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

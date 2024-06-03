@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baskara</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <a href="escolha.html">Voltar</a>
+    <div class="tudo" >
+        <h1>Baskara</h1>
+        Valor de A:
+        <input type="number" nome="txTn1" id="txTn1" >
+        <br>
+        Valor de B:
+        <input type="number" nome="txTn2" id="txTn2" >
+        <br>
+        Valor de C:
+        <input type="number" nome="txTn3" id="txTn3" >
+        <hr>
+        Resultado:
+        <input type="button" value="Resposta" onclick="somar()" >
+
+        <div id="res1">  </div>
+        <div id="res2">  </div>
+        <div id="res3">  </div>
+
+        <div class="partedetudo">
+            <script>
+            
+            /* pronpt
+                //primeiro três valores
+                var a1 = Number(prompt('qual é a letra A ?'));
+                var b1 = Number(prompt('qual é a letra B ?'));
+                var c1 = Number(prompt('qual é a letra C ?'));
+            */
+                
+            function somar(){
+
+                //ligação com o imputi
+                var letraa = document.getElementById('txTn1');
+                var letrab = document.getElementById('txTn2');
+                var letrac = document.getElementById('txTn3');
+                var res = document.getElementById('res');
+                
+                var a1 = Number(letraa.value)
+                var b1 = Number(letrab.value)
+                var c1 = Number(letrac.value)
+
+
+                //primeira formula
+                var Bq = b1 ** 2
+                var mul2 = 4 * a1
+                var mul3 = mul2 * c1
+                var delta = Bq - mul3
+            
+                //segunda formula
+                var p2 = -1 * b1
+                var raiz = Math.sqrt(delta)
+                var pdb = 2 * a1
+            
+                //terceira formula +
+                var b2 = p2+raiz
+                var resuposi = b2 / pdb
+            
+                //terceira formula -
+                var b2 = p2-raiz
+                var resunega = b2 / pdb
+
+
+                res1.innerHTML = `Delta = ${delta}`
+                res2.innerHTML = `X1 = ${resuposi}`
+                res3.innerHTML = `X2 = ${resunega}`
+            }
+             /* resultado no prompt 
+
+                document.write(`Resultado (delta)= ${delta}`);//resultado de delta
+                document.write(`<br>`);
+                document.write(`Resultado (X1)= ${resuposi}`);//resultado +
+                document.write('<br>');
+                document.write(`Resultado (X2)= ${resunega}`);//resultado -
+                document.write('<br>');
+                document.write(`Resultado (X2)= ${resunega1}`);
+                document.write('<br>');
+                document.write(`Resultado (X2)= ${pdb}`);
+                document.write('<br>');*/
+            
+            </script>
+        </div>
+    </div>
+</body>
+</html>

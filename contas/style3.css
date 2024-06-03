@@ -1,0 +1,48 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+header{
+    max-width: 900px;
+    min-width: 320px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+#tudo{
+    background-color: rgba(255, 0, 221, 0.404);
+    max-width: 700px;
+    min-width: 320px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 10px;
+   
+}
+#links{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+a:hover{
+    background-color: rgb(209, 96, 96);
+    color: rgb(255, 255, 255);
+}
+
+p{
+    text-align: left;
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELOCIDADE</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <a href="escolha.html">Voltar</a>
+    <div class="tudo">
+        
+        <h1>Velocidade Final</h1>
+
+        <img src="img/con-1.png" alt="">
+        <br>
+            <input type="text" name="Tt1" id="Tt1" placeholder="Vf =" >
+            <input type="text" name="Tt2" id="Tt2"  placeholder="Vi+" >
+            <input type="text" name="Tt3" id="Tt3"  placeholder="a." >
+            <input type="text" name="Tt4" id="Tt4"  placeholder="t" >
+        <br>
+        <input type="button" value="resposta" onclick="resposta()">
+        <div id="res1"></div>
+
+    </div>
+
+    <div class="tudo">
+            
+        <h1>Equação horária do espaço </h1>
+
+        <img src="img/cont-2.png" alt="">
+        <br>
+            <input type="text" name="s1" id="s1"  placeholder="S=">
+            <input type="text" name="si" id="si"  placeholder="S+" >
+            <input type="text" name="vi" id="vi"  placeholder="Vi." >
+            <input type="text" name="T1" id="T1"  placeholder="T+" >
+            <input type="text" name="a1" id="a1"  placeholder="a." >
+            <input type="text" name="T2" id="T2"  placeholder="t²" >/2
+        <br>
+        <input type="button" value="resposta" onclick="calcular()">
+        <div id="res"></div>
+    </div>
+
+    <div class="tudo">
+
+        <h1>Equação de Torricelli</h1>
+        <img src="img/cont-3.png" alt="">
+         <br>
+            <input type="text" name="v2" id="v2"  placeholder="V²=" >
+            <input type="text" name="vi2" id="vi2"  placeholder="Vi²+">2.
+            <input type="text" name="a" id="a"  placeholder="a." >
+            <input type="text" name="deltas" id="deltas"  placeholder="Δs" >
+        <br>
+        <input type="button" value="resposta" onclick="conta()">
+        <div id="res2"></div>
+
+    </div>
+        <script>
+
+        function resposta(){
+
+            var v11 = document.getElementById('Tt1').value;
+            var v22 = document.getElementById('Tt2').value;
+            var v33 = document.getElementById('Tt3').value;
+            var v44 = document.getElementById('Tt4').value;
+
+            var v1 = parseFloat(v11);
+            var v2 = parseFloat(v22);
+            var v3 = parseFloat(v33);
+            var v4 = parseFloat(v44);
+
+            if (isNaN(v1)){
+                var r1 = v3*v4
+                var r2 = r1 + v2
+                res1.innerHTML += `<P>A velocidade final é ${r2}</P>`
+
+            }else if(isNaN(v2)){
+                var q1 = v3*v4
+                var q2 = v1-q1
+                res1.innerHTML += `<P>A velocidade inicial é ${q2}</P>`  
+
+            }else if(isNaN(v3)){
+                var r1 = v1-v2
+                var r2 = r1 / v4
+                res1.innerHTML += `<P>O Resultado da aceleração é ${r2}</P>`  
+
+            }else if (isNaN(v4)){
+                var r1 = v1-v2
+                var r2 = r1 / v3
+                res1.innerHTML += `<P>O Resultado do tempo é ${r2}</P>`  
+            }
+        }
+
+            function calcular(){
+
+                var s  = document.getElementById('s1').value;
+                var si = document.getElementById('si').value;
+                var vi = document.getElementById('vi').value;
+                var t  = document.getElementById('T1').value;
+                var a  = document.getElementById('a1').value;
+                var t2 = document.getElementById('T2').value;
+
+                var s  = parseFloat(s);
+                var si = parseFloat(si);
+                var vi = parseFloat(vi);
+                var t  = parseFloat(t);
+                var a  = parseFloat(a);
+                var t2 = parseFloat(t2);
+
+                if (isNaN(s)){
+
+                    var v1 = vi*t 
+                    var v2 = t2**2
+                    var v3 = a*v2 
+                    var v4 = v3/2
+                    var v5 = si + v1 + v4
+
+                    res.innerHTML += `<P>O espaço final é ${v5}</P>`
+
+                }else if(isNaN(si)){
+
+                    var v1 = vi*t
+                    var v2 = t2**2
+                    var v3 = a*v2 
+                    var v4 = v3/2
+                    var v5 = v1+v4
+                    var v6 = s-v5
+                    
+                    res.innerHTML += `<P>O espaço inicial é ${v6}</P>`
+
+                }else if (isNaN(vi)){
+
+                    var v1 = a*(t**2)/2
+                    var v2 = si+v1-s
+                    var v3 = v2/vi
+                    res.innerHTML += `<P>O espaço inicial é ${r2}</P>`
+
+                }else if (isNaN(t)){
+
+                    res.innerHTML += `<P>Use a fórmula da <strong>velocidade final</strong> para descobrir o <strong>tempo</strong>!</P>`
+
+                }else if (isNaN(a)){
+
+
+                    res.innerHTML += `<P>Use a fórmula da <strong>velocidade final</strong> para descobrir a <strong>aceleração</strong>!</P>`
+
+                }else if (isNaN(t2)){
+
+
+                    res.innerHTML += `<P>Use a fórmula da <strong>velocidade final</strong> para descobrir o <strong>tempo</strong>!</P>`
+                }
+            }
+
+            function conta(){
+               
+                var v22  = document.getElementById('v2').value;
+                var vi22 = document.getElementById('vi2').value;
+                var a2  = document.getElementById('a').value;
+                var deltas2 = document.getElementById('deltas').value;
+
+                var v22  = parseFloat(v22);
+                var vi2 = parseFloat(vi22);
+                var a  = parseFloat(a2);
+                var deltas = parseFloat(deltas2);
+
+                if (isNaN(v22)){
+
+                    var v1 = vi2**2
+                    var v2 = 2*a*deltas
+                    var v3 = v1+v2 
+                    var v4 = Math.sqrt(v3)
+
+                    res2.innerHTML += `<p>O valor da velocidade final é de ${v4}</p>`
+
+                }else if (isNaN(vi2)){
+
+                    var v1 = v22**2
+                    var v2 = 2*a*deltas
+
+                    if (v2 > v1){
+                        var v3 = v2 - v1
+                    }else {
+                        var v3 = v1 - v2
+                    }
+
+                    var v4 = Math.sqrt(v3)
+
+                    res2.innerHTML += `<p>O valor da velocidade inicial é de ${v4}</p>`
+
+                }else if (isNaN(a)){
+
+                   res2.innerHTML += `<p>Usse a formula da <strong>velocidade final</strong> para descobrir a aceleração.</p>`
+
+                }else if (isNaN(deltas)){
+
+                    var v1 = v22**2
+                    var v2 = vi2**2
+                    var v3 = 2*a
+                    var v4 = v1-v2
+                    var v5 = v4/v3
+                    res2.innerHTML += `<p>A variação de espaço é ${v5}</p>`
+                }
+            }
+
+        </script>
+
+    </div>
+
+</body>
+</html>
+

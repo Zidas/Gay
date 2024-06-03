@@ -1,0 +1,41 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to left, rgb(255, 0, 191), rgba(255, 0, 191));
+    color: rgba(255, 255, 255, 0.664);
+}
+
+.tudo{
+    max-width: 700px;
+    min-width: 320px;
+    margin: auto;
+    text-align: center;
+    margin-top: 25px;
+}
+
+h4{
+
+    color: pink;
+}
+
+nav{
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 5px;
+}
+a:hover{
+    border: 1px solid white;
+}
+
+.btn btn-danger{
+ color: aliceblue;
+}

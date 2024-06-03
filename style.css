@@ -1,0 +1,125 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ff006a;
+    color: rgb(0, 0, 0);
+}
+
+header{
+    background-color: #02040A;
+    font-size: clamp(1em, 1em + 1vw, 1.5em);
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 80px;
+}
+
+article > normal{
+    display: block;
+}
+
+h1>a{
+    background-color: #14083300;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#video{
+    background-color: #02040A;
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 58%;
+    position: relative;
+}
+
+#video>iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+main{
+    margin: auto;
+    width: 100%;
+    max-width: 550px;
+    min-width: 320px;
+    text-align: justify;
+}
+
+li{
+    padding: 13px;
+}
+
+li>a{
+    text-decoration: none;
+    color: #ff006a;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 5px;
+}
+li>a:hover{
+    color: #ffffff;
+}
+
+.text{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+img{
+    width: 100%;
+}
+
+#texto{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    margin: 10px 10px 10px 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/*parabéns*/
+
+section{
+    max-width: 600px;
+    min-width: 320px;
+    margin: auto;
+    text-align: justify;
+    margin-top: 50px; 
+}
+
+article{
+    display: flex;
+    align-items: center;
+}
+
+img{
+    width: 200px;
+}
+
+p{
+    padding: 10px;
+    background-color: #ffffff9d;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 3px 3px 0px 3px;
+}
+footer{
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    max-width: 800px;
+    min-width: 320px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+a{
+    color: #ffffff;
+    margin: 10px;
+}
